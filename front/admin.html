@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dados de Login</h1>
+        <pre id="login-data"></pre>
+    </div>
+    <script>
+        fetch('/admin-data')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('login-data').innerText = data;
+            });
+    </script>
+</body>
+</html>

